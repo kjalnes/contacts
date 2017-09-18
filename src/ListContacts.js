@@ -49,8 +49,12 @@ class ListContacts extends Component {
                         value={query}
                         onChange={(event) => this.updateQuery(event.target.value)}
                     />
-                </div>
-
+                    <a
+                    href='#create'
+                    className='add-contact'
+                    onClick={ () => this.props.onNavigate()}
+                    >Add contact</a>
+                    </div>
                 <ol>
                     {showingContacts.map( contact => (
                         <li key={contact.id} className='contact-list-item'>
